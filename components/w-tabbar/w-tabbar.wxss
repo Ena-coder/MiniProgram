@@ -1,0 +1,18 @@
+/* components/w-tabbar/w-tabbar.wxss */
+.w-tabbar{
+  display: flex;
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: white;
+}
+.title-item{
+  /* display: inline-flex; */
+  flex: 1;
+  text-align: center;
+}
+.title-item-actived text{
+  border-bottom: #ff5777 solid 2rpx;
+  padding: 10rpx 20rpx;
+  color: #ff5777;
+}

@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<!-- 1.展示轮播图 -->
+<w-swiper list="{{banners}}"/>
+<!-- 2.显示推荐数据 -->
+<w-recommend recommends="{{recommends}}" bind:imageLoad="handleImageLoad"/>
+<!-- 3.展示本周流行 -->
+<w-popular/>
+<w-tabbar class="{{isFixed ? 'fixed' : ''}}" titles="{{['流行','新款','精选']}}" bind:handleTitleItemClick="handleTitleItemClick"/>
+<w-tabbar titles="{{['流行','新款','精选']}}" wx:if="{{isFixed}}" class="tab-control"/>
+<!-- 4.展示商品 -->
+<w-goods goods="{{goods[currentType].list}}"/>
+<!-- 回到顶部 -->
+<!-- hidden:hidden属于对于自定义的组件是无效的 -->
+<w-backtop wx:if="{{showBackTop}}"/>
